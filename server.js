@@ -4,13 +4,11 @@ var app = module.exports = express();
 var currentToken = 1;
 var token2username = {};
 
-/*
 app.get('/register', function(req, res){
 });
 
 app.get('/logout', function(req, res){
 });
-*/
 
 app.post('/login', function(req, res){
 	var data = req.body.user;
@@ -31,11 +29,10 @@ app.post('/login', function(req, res){
 		res.send({                
 			success : false, 
 			msg: "Authentication failed! Bad username or password"
-		}
+		});
 	}
 });
 
-/*
 app.get('/:userToken/posts', function(req, res) {
 	var userToken = req.params.userToken;
 	console.log(userToken);
@@ -61,11 +58,11 @@ app.get('/:userToken/posts', function(req, res) {
 	res.send(result);
 });
 
-app.get('/:userToken/post/:postId', function(req, res) {
+app.get('/:userToken/post/:postId', function(req, res){
 	var userToken = req.params.userToken;
 	
 	if (!token2username[userToken]) {
-		res.send({                
+		res.send({ 
 			success : false, 
 			msg: "Invalid user token"
 		});
@@ -74,9 +71,9 @@ app.get('/:userToken/post/:postId', function(req, res) {
 	
 	var postId = req.params.postId;
 	
-	var result = 
+	var result = {};
+	res.send(result);
 });
-*/
 
 app.use(function error(err, req, res, next) {
   console.error(err.stack);
