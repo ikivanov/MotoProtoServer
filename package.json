@@ -1,8 +1,10 @@
 {
-  "name": "Moto Proto Server",
+  "name": "MotoProtoServer",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "express": "~4.0.0"
+    "express": "~4.0.0",
+	"body-parser": "*",
+	"mongodb": "*"
   }
 }
