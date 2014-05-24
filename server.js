@@ -162,7 +162,8 @@ app.get('/:userToken/post/:postId', function(req, res){
 							username: username,
 							date: post.date,
 							title: post.title,
-							description: post.description
+							description: post.description,
+							route: post.route
 						};
 				
 					res.send({
